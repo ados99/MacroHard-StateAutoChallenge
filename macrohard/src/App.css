@@ -1,9 +1,20 @@
 .App {
   text-align: center;
+  background-image: url("Map.png");
+  background-size: fill;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo {
+  width: 8vw;
+  align-items: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -14,8 +25,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #282c34;          
+  width: 100vw;
+  height: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +47,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Sidebar */
+.Sidebar {
+  width: 24vw;
+  height: 100vh;
+  padding-top: .5vh;
+  padding-bottom: .5vh;
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  background:#FFF;
+  text-align: left;
+}
+
+/* Slider */
+
+.Slider {
+  width: 21vw;
+  margin-bottom: 5vh;
 }
