@@ -1,9 +1,19 @@
 .App {
   text-align: center;
+  background-size: fill;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo {
+  width: 8vw;
+  align-items: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -14,8 +24,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #282c34;          
+  width: 100vw;
+  height: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +48,46 @@
   }
 }
 
-.map{
-  height: 300px;
-  width: 500px;
+/* Sidebar */
+.Sidebar {
+  width: 24vw;
+  height: 100vh;
+  padding-top: .5vh;
+  padding-bottom: .5vh;
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  background:#FFF;
+  text-align: left;
+}
+
+/* Slider */
+
+.Slider {
+  width: 21vw;
+  margin-bottom: 5vh;
+}
+
+.rowC{display:flex; flex-direction:row;}
+
+.search{
+  position:absolute;
+  top: 0.1rem;
+  left: 50%;
+  z-index:10;
+  height: 100%;
+}
+
+.currentLoc{
+  position:absolute;
+  top: 0.1rem;
+  z-index:10;
+  left: 83%;
+}
+
+
+.locate{
+  background-color: #555555;
+  color:white;
+  font-size: 20px;
 }

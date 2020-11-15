@@ -1,5 +1,9 @@
+
 import React from "react"
 
+import logo from './logo.svg';
+import './App.css';
+import Sidebar from './components/Sidebar.js';
 
 import{
   GoogleMap,
@@ -25,8 +29,8 @@ import "@reach/combobox/styles.css";
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "500px",
-  height: "500px",
+  width: "1000px",
+  height: "750px",
 };
 
 const center = {
@@ -66,13 +70,20 @@ export default function App(){
   if(!isLoaded) return "Loading Maps";
   return(
     <div>
-      <h1>
-        Beavers
-      </h1>
-    Search: <Search panTo = {panTo}/>
-    <Locate panTo = {panTo}/>
-    <div class = "map">
-    <GoogleMap 
+    <div class = 'rowC'>
+      {/* <header className="App-header">
+        MacroHard
+      </header> */}
+      <Sidebar></Sidebar>
+      
+      <div> 
+        <div class = "search">
+            <Search panTo = {panTo}/>
+        </div>
+        <div class = "currentLoc">
+          <Locate panTo = {panTo}/>
+        </div>
+      <GoogleMap 
       mapContainerStyle = {mapContainerStyle} 
       zoom = {8} 
       center = {center}
@@ -88,13 +99,12 @@ export default function App(){
         )
       }}
     >
-
         <Marker position ={{lat:marker.lat, lng:marker.lng}}> </Marker>
     </GoogleMap>
+      </div>
     </div>
-  </div>
-  )
-}
+    </div>
+  )};
 
 function Locate({panTo}){
   return(
