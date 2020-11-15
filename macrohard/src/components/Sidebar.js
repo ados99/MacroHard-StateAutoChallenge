@@ -11,7 +11,8 @@ function Sidebar() {
 
             </div>
             <h1>Categories</h1>
-            <Item name="🚫 Crime" content="Crime data by location here"></Item>
+            <Item name="🚫 Crime" content="Franklin County property crime: 41/100."></Item>
+            <Item name="🌊 Floods" content="No major flood risk in the area"></Item>
             <Item name="📢 News" content="News by location here"></Item>
         </div>
     );

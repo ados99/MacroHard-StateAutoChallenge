@@ -8,7 +8,7 @@ function Item(props) {
 
     return (
         <div className="Item">
-            <h3>{props.name} Level <b>{value}</b></h3>
+            <h3>{props.name}</h3>
             {/* <RangeSlider
             value={value}
             onChange={changeEvent => setValue(changeEvent.target.value)}
