@@ -1,7 +1,5 @@
 
 import React from "react"
-
-import logo from './logo.svg';
 import './App.css';
 import Sidebar from './components/Sidebar.js';
 
@@ -64,7 +62,7 @@ export default function App(){
   }, [])
 
 
-  
+
 
   if(loadError) return "Error loading maps";
   if(!isLoaded) return "Loading Maps";
@@ -75,6 +73,8 @@ export default function App(){
         MacroHard
       </header> */}
       <Sidebar></Sidebar>
+
+      
       
       <div> 
         <div class = "search">
@@ -116,8 +116,7 @@ function Locate({panTo}){
         });
       }
       ,() => null,options);
-    }}>
-    <img src = "images.png" alt = "Locate me!" /> 
+    }}>Locate Me
     </button>
   )
 }
@@ -138,14 +137,14 @@ function Search({panTo}){
           console.log("error!");
         }
     }}>
-      <ComboboxInput value = {value} onChange = {(e) => {
+      <ComboboxInput className="searchInput" value = {value} onChange = {(e) => {
         setValue(e.target.value);
       }}
       disabled = {!ready}
       placeHolder = "Enter an address"
       />
-      <ComboboxPopover>
-        <ComboboxList>
+      <ComboboxPopover  className="suggestions">
+        <ComboboxList >
         {status === "OK" && data.map(({id, description}) => <ComboboxOption key= {id} value = {description}></ComboboxOption>)}
         </ComboboxList>
       </ComboboxPopover>

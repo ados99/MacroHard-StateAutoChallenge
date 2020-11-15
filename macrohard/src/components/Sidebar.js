@@ -1,9 +1,9 @@
 import '../App.css';
-import SliderBox from './SliderBox.js';
-import Slider from './Slider.js';
+import Item from './Item.js';
 import logo from '../logo.png';
 
 function Sidebar() {
+
     return (
         <div className="Sidebar">
             <div className='center'>
@@ -11,10 +11,8 @@ function Sidebar() {
 
             </div>
             <h1>Categories</h1>
-            <Slider name="🌪️ Storms:"></Slider>
-            <Slider name="🌊 Floods:"></Slider>
-            <Slider name="🚫 Crime:"></Slider>
-            <Slider name="🔥 Fire:"></Slider>
+            <Item name="🚫 Crime" content="Crime data by location here"></Item>
+            <Item name="📢 News" content="News by location here"></Item>
         </div>
     );
 }
